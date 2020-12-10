@@ -30,7 +30,7 @@ async def start(ctx):
     global typing
     typing = 1
     while typing == 1:
-        ctx.channel.trigger_typing()
+        await ctx.channel.trigger_typing()
 
 @bot.command()
 async def stop(ctx):

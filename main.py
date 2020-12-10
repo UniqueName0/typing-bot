@@ -37,4 +37,4 @@ async def name(ctx, name):
     message.guild.me.edit(nick=name)
 
     
-client.run(token)
+bot.run(token)

@@ -26,11 +26,11 @@ async def help(ctx):
 
 @bot.command()
 async def start(ctx):
-    await ctx.channel.startTyping(True)
+    await ctx.startTyping(True)
 
 @bot.command()
 async def stop(ctx):
-    await ctx.channel.stopTyping(True)
+    await ctx.stopTyping(True)
 
 @bot.command()
 async def name(ctx, name):

@@ -35,3 +35,6 @@ async def stop(ctx):
 @bot.command()
 async def name(ctx, name):
     message.guild.me.edit(nick=name)
+
+    
+client.run(token)

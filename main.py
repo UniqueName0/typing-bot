@@ -39,7 +39,7 @@ async def stop(ctx):
 
 @bot.command()
 async def name(ctx, name):
-    ctx.guild.me.edit(nick=name)
+    await ctx.guild.me.edit(nick=name)
 
     
     

@@ -12,7 +12,8 @@ bot = commands.Bot(command_prefix='TB')
 
 bot.remove_command('help')
 
-
+global typing
+typing = 0
 
 @bot.event
 async def on_ready():
@@ -26,15 +27,20 @@ async def help(ctx):
 
 @bot.command()
 async def start(ctx):
-    await ctx.startTyping(True)
+    global typing
+    typing = 1
+    while typing == 1:
+        ctx.channel.trigger_typing()
 
 @bot.command()
 async def stop(ctx):
-    await ctx.stopTyping(True)
+    global typing
+    typing = 0
 
 @bot.command()
 async def name(ctx, name):
     ctx.guild.me.edit(nick=name)
 
+    
     
 bot.run(token)

@@ -31,3 +31,7 @@ async def start(ctx):
 @bot.command()
 async def stop(ctx):
     await ctx.channel.stopTyping()
+
+@bot.command()
+async def name(ctx, name):
+    message.guild.me.edit(nick=name)

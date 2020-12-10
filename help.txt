@@ -1,0 +1,7 @@
+TBhelp - displays help
+
+TBname (name) - changes bot's name on the server
+
+TBstart - starts typing
+
+TBstop - stops typing

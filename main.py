@@ -20,6 +20,7 @@ async def on_ready():
     print('Logged in as')
     print(bot.user.name)
     print(bot.user.id)
+    client.change_presence(activity=discord.Game('TBhelp'))
 
 @bot.command()
 async def help(ctx):
